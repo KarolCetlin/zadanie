@@ -1,15 +1,9 @@
 const slider = document.getElementById('slider');
 const provinces = document.getElementsByTagName('path');
 
-
-
-
-
     for (let province of provinces) {
-
         province.addEventListener('mousemove', function () {
             this.classList.add('province__active');
-
         });
 
 
@@ -17,7 +11,7 @@ const provinces = document.getElementsByTagName('path');
             let sliderHide = slider.classList.contains('visible__hide');
 
             if(sliderHide === true){
-                new Slider2(2000);
+                new Slider(2000)
             }
 
             slider.classList.remove('visible__hide');

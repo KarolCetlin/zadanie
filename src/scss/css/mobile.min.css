@@ -1,0 +1,13 @@
+@media all and (min-width: 480px) {
+  .wrapper__header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page__logo {
+    position: initial;
+    max-height: none;
+  }
+}
+
+/*# sourceMappingURL=mobile.min.css.map */
