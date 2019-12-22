@@ -1,26 +1,80 @@
-const slider = document.getElementById('slider');
-const provinces = document.getElementsByTagName('path');
+const $slider = document.getElementById('slider');
+const $provinces = document.getElementsByTagName('path');
 
-    for (let province of provinces) {
-        province.addEventListener('mousemove', function () {
-            this.classList.add('province__active');
-        });
+(function provincesInteraction() {
 
+    for (let province of $provinces) {
 
-        province.addEventListener('click', function () {
-            let sliderHide = slider.classList.contains('visible__hide');
-
-            if(sliderHide === true){
-                new Slider(2000)
-            }
-
-            slider.classList.remove('visible__hide');
-            slider.classList.add('visible_active');
-        });
-
-        province.addEventListener('mouseout', function () {
-            province.classList.remove('province__active');
-        });
+        eventHandle('mousemove', province);
+        eventHandle('mouseout', province);
+        eventHandle('click', province);
 
     }
+
+})();
+
+function eventHandle(initEvent, forElement) {
+
+    forElement.addEventListener(initEvent, () => {
+
+        mouseEvent(initEvent, forElement);
+
+    });
+}
+
+function mouseEvent(typeEvent, forElement){
+
+    switch (typeEvent) {
+
+        case 'mousemove':
+
+            visible(forElement, 'add', 'province__active');
+            break;
+
+        case 'mouseout':
+
+            visible(forElement, 'remove', 'province__active');
+            break;
+
+        case 'click':
+
+            let sliderState = checkTrue($slider, 'visible__hide');
+            changeSliderState(sliderState, 2000);
+            break;
+
+    }
+}
+
+
+function visible(element, type, visibleClass) {
+
+    if (type === 'add') {
+
+        element.classList.add(visibleClass);
+
+    } else if (type === 'remove') {
+        element.classList.remove(visibleClass);
+    }
+}
+
+function changeSliderState(requirement, time) {
+
+    if (requirement === true) {
+        new Slider(time);
+        visible($slider, 'remove', 'visible__hide');
+        visible($slider, 'add', 'visible__active');
+
+    } else {
+        visible($slider, 'remove', 'visible__active');
+        visible($slider, 'add', 'visible__hide');
+
+    }
+}
+
+function checkTrue(element, toCheck) {
+
+    let classToCheck = toCheck.toString();
+    return element.classList.contains(classToCheck);
+
+}
 
