@@ -1,25 +1,33 @@
 
 .province__active {
-  fill: #051B4A;
+  fill: #9E3A46;
   background-color: aliceblue;
+  cursor: pointer;
 }
 
 
 .map__svg {
-  fill:#353385;
+  fill:#142060;
   padding: 30px;
+  stroke: #9E3A46;
 }
 
 .map__wrapper{
-  margin-top: 50px;
-  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vh;
+
+  border-radius: 15px;
 }
 
 .map__title {
-  font-family: empik, serif;
+  font-family: 'Bree Serif', serif;
+  color: #FADA7A;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 30px;
   text-align: center;
   padding: 20px 0;
-  border-bottom: 1px solid #D0D5DE;
+  border-bottom: 1px solid #9E3A46;
+  width: 90%;
 }

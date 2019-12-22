@@ -13,7 +13,7 @@ let slideNumber = 1;
 
 
 
-class Slider2 {
+class Slider {
     constructor(time) {
         this.functionsStack = this.functionsStack.bind(this);
         this.slideScroll = this.slideScroll.bind(this);

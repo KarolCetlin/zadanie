@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 
+   <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap&subset=latin-ext" rel="stylesheet">
+
+
+
 </head>
 <body>
 
@@ -20,40 +24,40 @@
 <header class="page__section page__section--header">
 
 <img src="./img/logo.png" alt="Logo empiku" class="page__logo">
-<div class="header__wrapper">
+<div class="header__wrapper ">
 <h1 class="page__title">Zadanie dla Front-end developera</h1>
 </div>
 
 </header>
 
 
-<section class="slider visible__hide slide-in-top" id="slider">
-             <div class="slider__position">
-                 <img src="./img/img1.jpg" alt="" class="slider__img slider__active-element--display" id="sliderImg">
-                 <img src="./img/img2.jpg" alt="" class="slider__img" id="sliderImg">
-                 <img src="./img/img3.jpg" alt="" class="slider__img" id="sliderImg">
+    <section class="slider animation__slideTop visible__hide" id="slider">
+        <div class="slider__position">
+             <img src="./img/img1.jpg" alt="" class="slider__img slider__active-element--display" id="sliderImg">
+             <img src="./img/img2.jpg" alt="" class="slider__img" id="sliderImg">
+             <img src="./img/img3.jpg" alt="" class="slider__img" id="sliderImg">
 
-                <div class="slider__arrowsList">
-                    <i class="slider__arrow-icon fas fa-angle-left" data-direction="back"></i>
-                    <i class="slider__arrow-icon fas fa-angle-right" data-direction="next"></i>
-                </div>
-
-
-                   <div class="slider__circle-list slider__circlesPosition">
-                     <i class="slider__circle-icon slider__active-circle--color fas fa-circle" data-index="0"></i>
-                     <i class="slider__circle-icon fas fa-circle" data-index="1"></i>
-                     <i class="slider__circle-icon fas fa-circle" data-index="2"></i>
-                   </div>
+            <div class="slider__arrowsList">
+                <i class="slider__arrow-icon fas fa-angle-left" data-direction="back"></i>
+                <i class="slider__arrow-icon fas fa-angle-right" data-direction="next"></i>
             </div>
-             </section>
+
+
+               <div class="slider__circle-list slider__circlesPosition">
+                 <i class="slider__circle-icon slider__active-circle--color fas fa-circle" data-index="0"></i>
+                 <i class="slider__circle-icon fas fa-circle" data-index="1"></i>
+                 <i class="slider__circle-icon fas fa-circle" data-index="2"></i>
+               </div>
+        </div>
+    </section>
 
 
 
-<div class="map__wrapper">
+<section class="map__wrapper">
 
 <h1 class="map__title">Mapa polski z podziałem na województwa</h1>
 
-    <svg class="map__svg"
+<svg class="map__svg"
          xmlns="http://www.w3.org/2000/svg"
          mapsvg:geoViewBox="14.122232 54.834941 24.149724 49.002699"
 
@@ -126,17 +130,24 @@
        title="Zachodniopomorskie"
        id="PL-ZP province" />
   </svg>
-</div>
+
+</section>
 
 <footer class="page__section page__section--footer">
+
 <h1 class="page__title">Karol Cetlin</h1>
 <h2 class="page__title">Kontakt: 514 - 068 - 771</h2>
+
+
 </footer>
 
 </div>
-<script src="scripts/slider/slider2.js"></script>
+
+
 
 <script src="scripts/map.js"></script>
+<script src="scripts/slider.js"></script>
+
 
 </body>
 </html>
